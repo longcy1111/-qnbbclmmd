@@ -24,9 +24,11 @@ model_path = os.path.join(path,"face_shapes_model.pkl")
 
 import signal
 import sys
+
 def handle_broken_pipe_error(signum,frame):
     sys.stderr.close()
-signal.signal(signal,SIGPIPE,handle_broken_pipe_error)
+
+signal.signal(signal.SIGPIPE,handle_broken_pipe_error)
 # 加载模型
 learn_inf = load_learner(model_path)
 
