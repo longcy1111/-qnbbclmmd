@@ -51,6 +51,7 @@ if 'ratings' not in st.session_state:
     st.session_state.ratings = []
 
 import os
+import joblib
 from joblib import load
 
 # 使用joblib加载模型
