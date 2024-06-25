@@ -1,5 +1,3 @@
-pip install --upgrade fastai streamlit
-
 import streamlit as st
 from PIL import Image, ImageFilter, ImageEnhance
 import os
@@ -23,7 +21,13 @@ else:
 path = os.path.dirname(os.path.abspath(__file__))
 model_path = os.path.join(path,"face_shapes_model.pkl")
 
+import signal
+import sys
 
+def handle_broken_pipe_error(signum,frame):
+    sys.stderr.close()
+
+signal.signal(signal.SIGPIPE, handle_broken_pipe_error)
 # 加载模型
 learn_inf = load_learner(model_path)
 
