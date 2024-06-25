@@ -82,7 +82,7 @@ descriptions = {
     "81-100": "  你的颜值简直是完美无瑕！无论是面容、身材还是气质，你都展现出了无可挑剔的美感。你的出现总能引起一阵惊叹和赞叹，让人为你的美丽而倾倒。你的独特魅力让人无法抗拒，无论是哪个角度，你都能散发出迷人的光彩。你的面容和气质相得益彰，无论是在派对聚会上还是在日常生活中，你总能轻易成为众人瞩目的中心。你的自信和从容让你在任何场合都光彩照人，继续保持这份风采!算我求你了！！"
 }
 
-from PIL import Image
+
 # 如果用户已上传图片
 if uploaded_file is not None:
     # 显示上传的图片
@@ -164,9 +164,8 @@ if uploaded_file is not None:
 
     # 使用模型进行预测
     #pred_class, pred_idx, probs = learn_inf.predict(PILImage.create(filtered_image))
-
-    
-    pred_class, pred_idx, probs = learn_inf.predict(image)
+    pil_image = PILImage.create(image)
+    pred_class, pred_idx, probs = learn_inf.predict(pil_image)
 
     # 替换预测结果中的脸型名称
     if pred_class == "oval-face":
