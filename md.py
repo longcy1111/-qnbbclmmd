@@ -55,7 +55,7 @@ import joblib
 from joblib import load
 
 # 使用joblib加载模型
-loaded_model = joblib.load('/mount/src/qnbbclmmd-/best_model.joblib')
+rfr_model = joblib.load('/mount/src/qnbbclmmd-/best_model.joblib')
 
 
 
