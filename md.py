@@ -54,7 +54,7 @@ import os
 from joblib import load
 
 # 使用joblib加载模型
-loaded_model = joblib.load('best_model.joblib')
+loaded_model = joblib.load('/mount/src/qnbbclmmd-/best_model.joblib')
 
 
 
