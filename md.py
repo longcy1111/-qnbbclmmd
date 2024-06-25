@@ -19,7 +19,7 @@ else:
 
 # 获取当前文件所在的文件夹路径
 path = os.path.dirname(os.path.abspath(__file__))
-model_path = os.path.join(path,"face_shape_model.pkl")
+model_path = os.path.join(path,"face_shapes_model.pkl")
 
 # 加载模型
 learn_inf = load_learner(model_path)
@@ -52,17 +52,9 @@ if 'ratings' not in st.session_state:
 
 # 获取当前文件所在的文件夹路径path = os.path.dirname(os.path.abspath(__file__)) model_path = os.path.join(path,"best_model.pkl")
 #加载模型 learn_inf = load_learner(model_path)
-
-
-import pickle
-
-# 指定.pkl文件的路径
-model_path = '/mount/src/qnbbclmmd-/best_model.pkl'
-
 # 加载模型
-with open(model_path, 'rb') as file:
-    rfr_modle = pickle.load(file)
-
+with open(r'/mount/src/qnbbclmmd-/best_model.pkl', 'rb') as file:
+    rfr_model = pickle.load(file)
 
 
 # 定义计算颜色直方图的函数
