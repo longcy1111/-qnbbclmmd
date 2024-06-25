@@ -50,6 +50,9 @@ uploaded_file = st.file_uploader("选择小仙女的美照吧~最好是正面照
 if 'ratings' not in st.session_state:
     st.session_state.ratings = []
 
+# 获取当前文件所在的文件夹路径
+path = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(path,"face_shapes_model.pkl")
 # 加载模型
 with open('best_model.pkl', 'rb') as file:
     rfr_model = pickle.load(file)
