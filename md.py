@@ -57,11 +57,6 @@ from joblib import load
 # 使用joblib加载模型
 rfr_model = joblib.load('/mount/src/qnbbclmmd-/best_model.joblib')
 
-
-
-
-
-
 # 定义计算颜色直方图的函数
 def compute_color_histogram_pil(image, bins=32):
     # Convert the image to the RGB color space
