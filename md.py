@@ -50,9 +50,16 @@ uploaded_file = st.file_uploader("选择小仙女的美照吧~最好是正面照
 if 'ratings' not in st.session_state:
     st.session_state.ratings = []
 
-# 使用joblib加载模型
-import joblib
-loaded_model = joblib.load('/mount/src/qnbbclmmd-/best_model.joblib')
+import os
+from joblib import load
+
+# 获取当前文件所在的文件夹路径
+path = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(path, "best_model.joblib")
+
+# 加载模型
+load_learner = load(model_path)
+
 
 
 # 定义计算颜色直方图的函数
