@@ -20,11 +20,9 @@ else:
 # 获取当前文件所在的文件夹路径
 path = os.path.dirname(os.path.abspath(__file__))
 model_path = os.path.join(path,"face_shapes_model.pkl")
-model_path_rfr = os.path.join(path,"best_model.pkl")
 
 # 加载模型
 learn_inf = load_learner(model_path)
-learn_inf = load_learner(model_path_rfr)
 
 # 恢复pathlib.Path的原始值
 if sys.platform == "win32":
@@ -55,11 +53,19 @@ if 'ratings' not in st.session_state:
 # 获取当前文件所在的文件夹路径
 #path = os.path.dirname(os.path.abspath(__file__))
 #model_path = os.path.join(path,"best_model.pkl")
-# 加载模型
+    # 加载模型
 #with open('best_model.pkl', 'rb') as file:
- #   rfr_model = pickle.load(file)
+#    rfr_model = pickle.load(file)
 # 加载模型
 #learn_inf = load_learner(model_path)
+
+# 获取当前文件所在的文件夹路径
+path = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(path, "best_model.pkl")
+
+# 加载模型
+with open(model_path, 'rb') as file:
+    rfr_model = pickle.load(file)
 
 
 
