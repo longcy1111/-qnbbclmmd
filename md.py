@@ -50,11 +50,9 @@ uploaded_file = st.file_uploader("选择小仙女的美照吧~最好是正面照
 if 'ratings' not in st.session_state:
     st.session_state.ratings = []
 
-# 获取当前文件所在的文件夹路径path = os.path.dirname(os.path.abspath(__file__)) model_path = os.path.join(path,"best_model.pkl")
-#加载模型 learn_inf = load_learner(model_path)
-# 加载模型
-with open(r'/mount/src/qnbbclmmd-/best_model.pkl', 'rb') as file:
-    rfr_model = pickle.load(file)
+# 使用joblib加载模型
+import joblib
+loaded_model = joblib.load('best_model.joblib')
 
 
 # 定义计算颜色直方图的函数
