@@ -19,7 +19,7 @@ else:
 
 # 获取当前文件所在的文件夹路径
 path = os.path.dirname(os.path.abspath(__file__))
-model_path = os.path.join(path,"face_shapes_model.pkl")
+model_path = os.path.join(path,"best_model.pkl")
 
 # 加载模型
 learn_inf = load_learner(model_path)
