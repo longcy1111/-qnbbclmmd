@@ -1,7 +1,7 @@
 torch==2.3.1
 fastai==2.7.15
 streamlit==1.35.0
-python==3.10.11
+pickle-mixin==1.0.2
 pillow==10.3.0
 numpy==1.26.4
 pandas==2.2.2
