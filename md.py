@@ -51,11 +51,10 @@ if 'ratings' not in st.session_state:
     st.session_state.ratings = []
 
 # 获取当前文件所在的文件夹路径path = os.path.dirname(os.path.abspath(__file__)) model_path = os.path.join(path,"best_model.pkl")
+#加载模型 learn_inf = load_learner(model_path)
 
 with open('/mount/src/qnbbclmmd-/best_model.pkl', 'rb') as file:
     rfr_model = pickle.load(file)
-
-#加载模型 learn_inf = load_learner(model_path)
 
 
 
