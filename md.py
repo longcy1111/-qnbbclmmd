@@ -162,7 +162,10 @@ if uploaded_file is not None:
         st.image(filtered_image, caption="滤镜后的图片", use_column_width=True)
 
     # 使用模型进行预测
-    pred_class, pred_idx, probs = learn_inf.predict(PILImage.create(filtered_image))
+    #pred_class, pred_idx, probs = learn_inf.predict(PILImage.create(filtered_image))
+
+    from PIL import Image
+    pred_class, pred_idx, probs = learn_inf.predict(image)
 
     # 替换预测结果中的脸型名称
     if pred_class == "oval-face":
