@@ -21,6 +21,10 @@ else:
 path = os.path.dirname(os.path.abspath(__file__))
 model_path = os.path.join(path,"face_shapes_model.pkl")
 
+
+from fastprogress import fastprogress 
+# 禁用fastai的进度条 
+fastprogress.fastprogress.NO_BAR = True
 # 加载模型
 learn_inf = load_learner(model_path)
 
