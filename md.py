@@ -52,7 +52,7 @@ if 'ratings' not in st.session_state:
 
 # 使用joblib加载模型
 import joblib
-loaded_model = joblib.load('best_model.joblib')
+loaded_model = joblib.load('/mount/src/qnbbclmmd-/best_model.joblib')
 
 
 # 定义计算颜色直方图的函数
