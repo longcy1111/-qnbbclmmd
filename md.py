@@ -53,12 +53,11 @@ if 'ratings' not in st.session_state:
 import os
 from joblib import load
 
-# 获取当前文件所在的文件夹路径
-path = os.path.dirname(os.path.abspath(__file__))
-model_path = os.path.join(path, "best_model.joblib")
+# 使用joblib加载模型
+loaded_model = joblib.load('best_model.joblib')
 
-# 加载模型
-load_learner = load(model_path)
+
+
 
 
 
