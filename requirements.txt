@@ -1,9 +1,9 @@
 torch==2.3.1
 fastai==2.7.15
-streamlit==1.35.0
+streamlit==1.36.0
 joblib==1.4.2 
-pickle-mixin==1.0.2
-pillow==10.3.0
+pickleshare==0.7.5
+pillow==10.2.0
 numpy==1.26.4
-pandas==2.2.2
+pandas==2.1.4
 scikit-learn==1.2.2
